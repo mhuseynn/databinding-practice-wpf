@@ -1,0 +1,32 @@
+﻿<Window x:Class="databinding_start.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:databinding_start"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" >
+            <DockPanel >
+                <Grid DockPanel.Dock="Top" Height="70" Background="Aqua" >
+                    <Image Source="https://i.pinimg.com/originals/f9/f3/af/f9f3af9af7c5b825ad372d555aae3697.png" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label Content="Message App" Margin="70 0 0 0" FontSize="30" VerticalAlignment="Center"/>
+                </Grid>
+            </DockPanel>
+            <ListBox Name="listbox"  FontSize="25" Grid.Row="0"  ItemsSource="{Binding messages}" Height="460" >
+                
+            </ListBox>
+            
+        </StackPanel>
+
+        <Grid Grid.Row="1" Background="NavajoWhite" >
+            <Image Source="https://static.thenounproject.com/png/1054386-200.png" HorizontalAlignment="Right" />
+        </Grid>
+    </Grid>
+</Window>
